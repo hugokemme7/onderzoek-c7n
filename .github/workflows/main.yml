@@ -25,12 +25,12 @@ jobs:
 
     # Step 3: Restore dependencies for the specific project
     - name: Restore dependencies
-      run: dotnet restore src/c7n-api/c7n-api.csproj
+      run: dotnet restore c7n-api/c7n-api.csproj
 
     # Step 4: Build the specific project
     - name: Build the project
-      run: dotnet build src/c7n-api/c7n-api.csproj --configuration Release --no-restore
+      run: dotnet build c7n-api/c7n-api.csproj --configuration Release --no-restore
 
     # Step 5: Run tests for the project
     - name: Run tests
-      run: dotnet test src/c7n-api/c7n-api.csproj --no-build --verbosity normal
+      run: dotnet test c7n-api/c7n-api.csproj --no-build --verbosity normal
