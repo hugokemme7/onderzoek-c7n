@@ -1,0 +1,14 @@
+﻿services:
+  api:
+    container_name: api
+    build:
+      context: ./c7n-api
+      dockerfile: ./dockerfile
+    ports:
+      - '5172:5172'
+        
+  mail-service:
+    container_name: mail-service
+    build:
+      context: ./MailService
+      dockerfile: ./dockerfile
