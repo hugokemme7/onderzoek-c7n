@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 
 RUN pip install c7n
 
-COPY policies.yml ./policies.yml
+COPY policy.yml ./policies/policy.yml
 
 CMD ["custodian", "run", "--config", "policies.yml"]
