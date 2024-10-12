@@ -32,13 +32,13 @@ jobs:
 
     # Step 4: Build the Docker image
     - name: Build Docker image
-      run: docker build -t my-cloud-custodian:latest .
+      run: docker build -t cloudcustodian/c7n:latest .
 
     # Step 5: Run Cloud Custodian policies
     - name: Run Cloud Custodian policies
-      run: docker run my-cloud-custodian:latest
+      run: docker run cloudcustodian/c7n:latest
 
     # Step 6: Push Docker image to DockerHub (optional)
     - name: Push Docker image
-      run: docker push my-cloud-custodian:latest
+      run: docker push cloudcustodian/c7n:latest
       if: success() # Only push if the build succeeds
