@@ -1,0 +1,9 @@
+﻿FROM python:3.11-slim
+
+WORKDIR /usr/src/app
+
+RUN pip install c7n
+
+COPY policies.yml ./policies.yml
+
+CMD ["custodian", "run", "--config", "policies.yml"]
