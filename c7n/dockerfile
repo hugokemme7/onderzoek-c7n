@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 RUN pip install c7n
 
-COPY policy.yml ./Policies/policy.yml
+RUN pip install c7n-kube
 
-CMD ["custodian", "run", "--config", "policies.yml"]
+COPY . ./Policies/
+
+CMD ["custodian", "run", "-s", "out", "Policies/policy.yml"]

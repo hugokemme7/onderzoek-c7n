@@ -5,4 +5,4 @@
       - State.Name: running
       - "tag:Unstable": present
     actions:
-      - type: stop
+      - type: delete

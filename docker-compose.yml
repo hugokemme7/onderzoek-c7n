@@ -6,9 +6,20 @@
       dockerfile: ./dockerfile
     ports:
       - '5172:5172'
-        
+    image: hugokemme/c7n-onderzoek/api:latest  
+  
   mail-service:
     container_name: mail-service
     build:
       context: ./MailService
       dockerfile: ./dockerfile
+    image: hugokemme/c7n-onderzoek/mail-service:latest
+  
+  cloud-custodian:
+    container_name: cloud-custodian
+    build:
+      context: ./c7n
+      dockerfile: ./dockerfile
+    volumes:
+      - ./c7n/Policies:/usr/src/app/Policies
+    image: hugokemme/c7n-onderzoek/cloud-custodian:latest
