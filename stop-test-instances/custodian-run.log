@@ -1,0 +1,70 @@
+2025-01-12 15:27:59,248 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.09
+2025-01-12 15:29:35,367 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:29:46,079 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:30:23,553 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:30:45,218 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:31:04,284 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:31:37,200 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:36:06,641 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:36:53,713 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:38:07,673 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:38:37,256 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:41:48,546 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:42:07,704 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:42:41,506 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:42:52,465 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:46:57,496 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.09
+2025-01-12 15:52:28,635 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:53:12,125 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 15:54:20,391 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 16:09:00,309 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.07
+2025-01-12 16:25:23,090 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.09
+2025-01-12 16:25:45,429 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 16:25:59,165 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-12 16:28:41,333 - custodian.output - ERROR - Error while executing policy
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\c7n\policy.py", line 330, in run
+    resources = self.policy.resource_manager.resources()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n_kube\query.py", line 117, in resources
+    return self.filter_resources(resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\manager.py", line 113, in filter_resources
+    resources = f.process(resources, event)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 600, in process
+    return super(ValueFilter, self).process(resources, event)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 205, in process
+    return list(filter(self, resources))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 587, in __call__
+    matched = self.match(i)
+              ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 651, in match
+    r = self.get_resource_value(self.k, i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 603, in get_resource_value
+    return super(ValueFilter, self).get_resource_value(k, i, self.data.get('value_regex'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\filters\core.py", line 265, in get_resource_value
+    self.expr[k] = jmespath_compile(k)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\utils.py", line 1011, in jmespath_compile
+    parsed = C7NJMESPathParser().parse(expression)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\c7n\utils.py", line 971, in parse
+    result = super().parse(expression)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\jmespath\parser.py", line 88, in parse
+    parsed_result = self._do_parse(expression)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\jmespath\parser.py", line 96, in _do_parse
+    return self._parse(expression)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\jmespath\parser.py", line 114, in _parse
+    raise exceptions.ParseError(t['start'], t['value'], t['type'],
+jmespath.exceptions.ParseError: Unexpected token: :: Parse error at column 5, token ":" (COLON), for expression:
+"label:test"
+      ^
+2025-01-12 16:29:03,144 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:15 time:0.00

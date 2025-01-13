@@ -1,8 +1,5 @@
-﻿policies:
-  - name: stop-unstable-instances
+policies:
+  - name: stop-test-instances
     resource: k8s.pod
     filters:
-      - State.Name: running
-      - "tag:Unstable": present
-    actions:
-      - type: delete
+      - "tag:test": "absent"

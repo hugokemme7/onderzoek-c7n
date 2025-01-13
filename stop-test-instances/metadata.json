@@ -1,0 +1,65 @@
+{
+  "policy": {
+    "name": "stop-test-instances",
+    "resource": "k8s.pod",
+    "filters": [
+      {
+        "tag:test": "absent"
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "71f33430-4b12-4a13-908b-3b9196e6bb08",
+    "start": 1736695743.1414473,
+    "end_time": 1736695743.1596825,
+    "duration": 0.018235206604003906
+  },
+  "config": {
+    "region": "",
+    "regions": [],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": null,
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": ".",
+    "cache_period": 15,
+    "dryrun": true,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "./c7n/Policies/policy.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {},
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2025-01-12T16:29:03.145129",
+      "Value": 15,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2025-01-12T16:29:03.145129",
+      "Value": 0.002157926559448242,
+      "Unit": "Seconds"
+    }
+  ]
+}

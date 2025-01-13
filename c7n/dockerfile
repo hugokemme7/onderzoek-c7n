@@ -2,10 +2,12 @@
 
 WORKDIR /usr/src/app
 
+ENV KUBECONFIG=/root/.kube/config
+
 RUN pip install c7n
 
 RUN pip install c7n-kube
 
-COPY . ./Policies/
+COPY . .
 
 CMD ["custodian", "run", "-s", "out", "Policies/policy.yml"]

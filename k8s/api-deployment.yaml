@@ -21,8 +21,9 @@ spec:
         io.kompose.service: api
     spec:
       containers:
-        - image: onderzoek-c7n-api:latest
+        - image: c7n-onderzoek/api:latest
           name: api
+          imagePullPolicy: Never
           ports:
             - containerPort: 5172
               protocol: TCP

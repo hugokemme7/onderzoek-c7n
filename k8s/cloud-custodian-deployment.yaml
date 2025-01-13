@@ -23,8 +23,9 @@ spec:
         io.kompose.service: cloud-custodian
     spec:
       containers:
-        - image: onderzoek-c7n-cloud-custodian:latest
+        - image: c7n-onderzoek/cloud-custodian:latest
           name: cloud-custodian
+          imagePullPolicy: Never
           volumeMounts:
             - mountPath: /usr/src/app/Policies
               name: cloud-custodian-cm0

@@ -21,6 +21,8 @@ spec:
         io.kompose.service: mail-service
     spec:
       containers:
-        - image: onderzoek-c7n-mail-service:latest
+        - image: c7n-onderzoek/mail-service:test
           name: mail-service
+          imagePullPolicy: Never
       restartPolicy: Always
+      
