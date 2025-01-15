@@ -68,3 +68,18 @@ jmespath.exceptions.ParseError: Unexpected token: :: Parse error at column 5, to
 "label:test"
       ^
 2025-01-12 16:29:03,144 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:15 time:0.00
+2025-01-14 21:12:37,831 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:15 time:0.12
+2025-01-14 21:13:14,043 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:17:32,322 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.01
+2025-01-14 21:18:39,456 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:3 time:0.00
+2025-01-14 21:21:31,247 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:22:48,728 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:23:11,261 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:3 time:0.00
+2025-01-14 21:24:54,347 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:3 time:0.00
+2025-01-14 21:30:47,754 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.10
+2025-01-14 21:31:07,931 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:31:18,180 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:3 time:0.00
+2025-01-14 21:33:01,590 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:33:32,550 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:3 time:0.00
+2025-01-14 21:34:19,512 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:0 time:0.00
+2025-01-14 21:36:04,695 - custodian.policy - INFO - policy:stop-test-instances resource:k8s.pod region: count:1 time:0.00

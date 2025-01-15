@@ -4,16 +4,30 @@
     "resource": "k8s.pod",
     "filters": [
       {
-        "tag:test": "absent"
+        "type": "value",
+        "key": "metadata.namespace",
+        "op": "eq",
+        "value": "default"
+      },
+      {
+        "type": "value",
+        "key": "metadata.labels.test",
+        "op": "eq",
+        "value": "true"
+      }
+    ],
+    "actions": [
+      {
+        "type": "delete"
       }
     ]
   },
   "version": "0.9.41",
   "execution": {
-    "id": "71f33430-4b12-4a13-908b-3b9196e6bb08",
-    "start": 1736695743.1414473,
-    "end_time": 1736695743.1596825,
-    "duration": 0.018235206604003906
+    "id": "9aeb4b14-9bb2-42c8-98ef-8124d58408c7",
+    "start": 1736886964.6924498,
+    "end_time": 1736886964.697595,
+    "duration": 0.005145072937011719
   },
   "config": {
     "region": "",
@@ -51,14 +65,14 @@
   "metrics": [
     {
       "MetricName": "ResourceCount",
-      "Timestamp": "2025-01-12T16:29:03.145129",
-      "Value": 15,
+      "Timestamp": "2025-01-14T21:36:04.696459",
+      "Value": 1,
       "Unit": "Count"
     },
     {
       "MetricName": "ResourceTime",
-      "Timestamp": "2025-01-12T16:29:03.145129",
-      "Value": 0.002157926559448242,
+      "Timestamp": "2025-01-14T21:36:04.696459",
+      "Value": 0.00339508056640625,
       "Unit": "Seconds"
     }
   ]

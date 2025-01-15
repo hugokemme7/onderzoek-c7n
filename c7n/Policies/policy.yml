@@ -2,4 +2,13 @@ policies:
   - name: stop-test-instances
     resource: k8s.pod
     filters:
-      - "tag:test": "absent"
+      - type: value
+        key: metadata.namespace
+        op: eq
+        value: default
+      - type: value
+        key: metadata.labels.test
+        op: eq
+        value: "true"
+    actions:
+      - type: delete
